@@ -1,0 +1,15 @@
+<div data-role="page">
+  <% is_bb6 = System::get_property('platform') == 'Blackberry' && (System::get_property('os_version').split('.')[0].to_i >= 6) %>
+  <div data-role="header" data-position="inline">
+    <h1>Map</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Home
+    </a>
+  </div>
+  <img src="http://rhohub-motorolasoluti-9dc0875a.rhosync.com/title_image" style="width:100%"/>
+  <div data-role="content">
+    <ul data-role="listview">
+      <li>Please Wait...</li>
+    </ul>
+   </div>
+</div>

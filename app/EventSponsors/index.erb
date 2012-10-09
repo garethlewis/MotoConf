@@ -1,0 +1,24 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Event Sponsors</h1>
+    <a href="<%= url_for :controller => :EMEA, :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Back
+    </a>
+	</div>
+  <img src="http://rhohub-motorolasoluti-9dc0875a.rhosync.com/title_image" style="width:100%"/>
+  <div data-role="content">
+    <ul data-role="listview">
+      <% @eventsponsorses.each do |eventsponsors| %>
+      
+          <li>
+            <a href="<%= url_for :action => :show, :id => eventsponsors.object %>">
+              <%= eventsponsors.name %>
+            </a>
+          </li>
+      
+      <% end %>
+    </ul>
+  </div>
+
+</div>

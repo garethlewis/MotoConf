@@ -1,0 +1,46 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>App Forum 2012</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Back
+    </a>
+	</div>
+  <img src="http://rhohub-motorolasoluti-9dc0875a.rhosync.com/title_image" style="width:100%"/>
+  <div data-role="content">
+    <ul data-role="listview">
+      <% @emeas.each do |emea| %>
+      
+          <li>
+            <% if emea.type == "eventsponsors" %>
+              <a href="<%= url_for :action => :show, :model => :EventSponsors, :id => emea.object %>">
+                <%= emea.name %>
+              </a>
+            <% elsif emea.type == "agenda" %>
+              <a href="<%= url_for :action => :show, :model => :Agendas, :id => emea.object %>">
+                <%= emea.name %>
+              </a>
+            <% elsif emea.type == "map" %>
+              <a href="<%= url_for :controller => :Map, :action => :index %>">
+                <%= emea.name %>
+              </a>
+            <% elsif emea.type == "faqs" %>
+              <a href="<%= url_for :action => :show, :model => :FAQ, :id => emea.object %>">
+                <%= emea.name %>
+              </a>
+            <% elsif emea.type == "fullprogramme" %>
+              <a href="<%= url_for :action => :show, :model => :FullProgramme, :id => emea.object %>">
+                <%= emea.name %>
+              </a>
+            <% else %>
+              <a href="<%= url_for :action => :show, :id => emea.object %>">
+                <%= emea.name %>
+              </a>
+            <% end %>
+          </li>
+      
+      <% end %>
+    </ul>
+  </div>
+
+</div>

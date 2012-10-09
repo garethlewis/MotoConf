@@ -1,0 +1,32 @@
+#sdk: "/Users/gareth_lewis2/.rvm/gems/ruby-1.9.3-p194/gems/rhodes-3.4.2/"
+sdkversion: "3.4.0"
+name: "MotorolaConferences"
+version: 1.0
+vendor: "rhomobile"
+build: "debug"
+bbver: 4.6
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator5.1"
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.appforum"
+  BundleURLScheme: "appforum"
+  emulatortarget: "iphone"
+wp:
+  productid: "0f84e760-bd22-012f-d9b2-0024d76525bc"
+symbian:
+  uid: "0xee87b74d"
+android:
+  android_title: 0
+  version: "2.3.3"
+  production: "C:/Users/wxfr78/Work"
+  password: "Motorola*"
+  alias: "keystore.alias"
+extensions:
+  - json
+  - digest
+  - digest-md5
+  - digest-sha1

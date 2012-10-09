@@ -1,0 +1,35 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @fullprogramme.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @fullprogramme.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="fullprogramme[id]" class="fieldLabel">Id</label>
+            <input type="text" id="fullprogramme[id]" name="fullprogramme[id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="fullprogramme[heading]" class="fieldLabel">Heading</label>
+            <input type="text" id="fullprogramme[heading]" name="fullprogramme[heading]" <%= placeholder("Heading") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="fullprogramme[body]" class="fieldLabel">Body</label>
+            <input type="text" id="fullprogramme[body]" name="fullprogramme[body]" <%= placeholder("Body") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

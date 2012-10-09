@@ -1,0 +1,14 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <h1>Not logged in</h1>
+  </div>
+  <img src="/public/images/APPFORUM_440x122.jpg" style="width:100%"/>
+  <div data-role="content">
+    <p>Cannot log in to the RhoConnect server.  Please restart the application to try again.</p>
+  </div>
+  
+  <form method="POST" action="<%= url_for :action => :do_simple_login %>">
+    <input type="submit" value="Login"/>
+  </form>
+</div>
